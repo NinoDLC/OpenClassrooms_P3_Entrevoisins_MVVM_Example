@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_neighbour_title">Mes voisins</string>
+    <string name="tab_favorites_title">Mes favoris</string>
+
+    <string name="activity_new_neighbour">Ajouter un voisin</string>
+
+    <string name="name">Nom</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="address">Adresse</string>
+    <string name="about_me">A propos de moi</string>
+    <string name="save">Ajouter</string>
+
+    <string name="a11y_add_neighbour">Ajouter un voisin</string>
+    <string name="a11y_delete_neighbour">Supprimer le voisin</string>
+    <string name="a11y_add_favorite">Ajouter aux favoris</string>
+</resources>

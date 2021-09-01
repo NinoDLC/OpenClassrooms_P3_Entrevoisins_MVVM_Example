@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">Entrevoisins</string>
+
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">My favorites</string>
+
+    <string name="activity_new_neighbour">New neighbour</string>
+
+    <string name="name">Name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="address">Address</string>
+    <string name="about_me">About me</string>
+    <string name="save">Save</string>
+    <string name="facebook_link" translatable="false">www.facebook.fr/%s</string>
+
+    <string name="a11y_add_neighbour">Add a neighbour</string>
+    <string name="a11y_delete_neighbour">Delete neighbour</string>
+    <string name="a11y_add_favorite">Add to favorites</string>
+</resources>
