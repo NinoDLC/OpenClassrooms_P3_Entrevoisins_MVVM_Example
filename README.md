@@ -1,8 +1,8 @@
 # Introduction
 Refactoring du projet 3 en MVVM (qui était initialement en MVC), avec la plupart des bonnes pratiques associées 
-au MVVM. C'est une bonne base pour apprendre le MVVM : vous connaissez déjà le projet, je n'ai pas beaucoup touché
+au MVVM. C'est une bonne base pour apprendre le MVVM puisque vous connaissez déjà le projet. Je n'ai pas beaucoup touché
 les XML (je les ai juste un peu remis au goût du jour), les seules différences concernent la transformation en
-architecture MVVM.  
+architecture MVVM, c'est à dire les Activity / Fragment et les nouveaux ViewModels !
 
 Bonne découverte ! 
 
