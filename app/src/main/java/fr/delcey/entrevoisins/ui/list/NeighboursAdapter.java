@@ -1,10 +1,7 @@
 package fr.delcey.entrevoisins.ui.list;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
@@ -14,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-import fr.delcey.entrevoisins.R;
+import fr.delcey.entrevoisins.databinding.NeighboursItemBinding;
 
 public class NeighboursAdapter extends ListAdapter<NeighboursViewStateItem, NeighboursAdapter.ViewHolder> {
 
@@ -29,7 +26,7 @@ public class NeighboursAdapter extends ListAdapter<NeighboursViewStateItem, Neig
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.neighbours_item, parent, false));
+        return new ViewHolder(NeighboursItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -40,26 +37,21 @@ public class NeighboursAdapter extends ListAdapter<NeighboursViewStateItem, Neig
     // Ask your mentor why this class is static ! This is important.
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final ImageView avatarImageView;
-        private final TextView nameTextView;
-        private final ImageView deleteImageView;
+        private final NeighboursItemBinding binding;
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            avatarImageView = itemView.findViewById(R.id.neighbours_item_iv_avatar);
-            nameTextView = itemView.findViewById(R.id.neighbours_item_tv_name);
-            deleteImageView = itemView.findViewById(R.id.neighbours_item_iv_delete);
+        public ViewHolder(@NonNull NeighboursItemBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
 
         public void bind(NeighboursViewStateItem item, OnNeighbourClickedListener listener) {
             itemView.setOnClickListener(v -> listener.onNeighbourClicked(item.getId()));
-            Glide.with(avatarImageView)
+            Glide.with(binding.neighboursItemImageViewAvatar)
                 .load(item.getAvatarUrl())
                 .apply(RequestOptions.circleCropTransform())
-                .into(avatarImageView);
-            nameTextView.setText(item.getName());
-            deleteImageView.setOnClickListener(v -> listener.onDeleteNeighbourClicked(item.getId()));
+                .into(binding.neighboursItemImageViewAvatar);
+            binding.neighboursItemTextViewName.setText(item.getName());
+            binding.neighboursItemImageViewDelete.setOnClickListener(v -> listener.onDeleteNeighbourClicked(item.getId()));
         }
     }
 

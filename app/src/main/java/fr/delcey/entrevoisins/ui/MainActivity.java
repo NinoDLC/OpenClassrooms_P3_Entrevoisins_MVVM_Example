@@ -1,14 +1,10 @@
 package fr.delcey.entrevoisins.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.tabs.TabLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
-import fr.delcey.entrevoisins.R;
+import fr.delcey.entrevoisins.databinding.MainActivityBinding;
 import fr.delcey.entrevoisins.ui.add.AddNeighbourActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,14 +13,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.main_activity);
+        MainActivityBinding binding = MainActivityBinding.inflate(getLayoutInflater());
 
-        ViewPager viewPager = findViewById(R.id.main_vp);
-        viewPager.setAdapter(new MainPagerAdapter(this, getSupportFragmentManager()));
-        TabLayout tabs =  findViewById(R.id.main_tabs);
-        tabs.setupWithViewPager(viewPager);
+        setContentView(binding.getRoot());
 
-        FloatingActionButton fab = findViewById(R.id.main_fab_add);
-        fab.setOnClickListener(v -> startActivity(AddNeighbourActivity.navigate(this)));
+        binding.mainViewPager.setAdapter(new MainPagerAdapter(this, getSupportFragmentManager()));
+        binding.mainTabLayout.setupWithViewPager(binding.mainViewPager);
+        binding.mainFloatingActionButtonAdd.setOnClickListener(v -> startActivity(AddNeighbourActivity.navigate(this)));
     }
 }

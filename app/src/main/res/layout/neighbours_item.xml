@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/neighbours_item_iv_avatar"
+        android:id="@+id/neighbours_item_ImageView_avatar"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
@@ -20,20 +20,20 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/neighbours_item_tv_name"
+        android:id="@+id/neighbours_item_TextView_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="8dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/neighbours_item_iv_avatar"
-        app:layout_constraintEnd_toEndOf="@id/neighbours_item_iv_delete"
-        app:layout_constraintStart_toEndOf="@+id/neighbours_item_iv_avatar"
-        app:layout_constraintTop_toTopOf="@+id/neighbours_item_iv_avatar"
+        app:layout_constraintBottom_toBottomOf="@+id/neighbours_item_ImageView_avatar"
+        app:layout_constraintEnd_toEndOf="@id/neighbours_item_ImageView_delete"
+        app:layout_constraintStart_toEndOf="@+id/neighbours_item_ImageView_avatar"
+        app:layout_constraintTop_toTopOf="@+id/neighbours_item_ImageView_avatar"
         tools:text="@tools:sample/first_names" />
 
     <ImageView
-        android:id="@+id/neighbours_item_iv_delete"
+        android:id="@+id/neighbours_item_ImageView_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -41,8 +41,8 @@
         android:background="?selectableItemBackground"
         android:contentDescription="@string/a11y_delete_neighbour"
         android:src="@drawable/ic_delete_24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/neighbours_item_tv_name"
+        app:layout_constraintBottom_toBottomOf="@+id/neighbours_item_TextView_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/neighbours_item_tv_name" />
+        app:layout_constraintTop_toTopOf="@+id/neighbours_item_TextView_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

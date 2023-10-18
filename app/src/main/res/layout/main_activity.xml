@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <TextView
-            android:id="@+id/main_tv_title"
+            android:id="@+id/main_TextView_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -24,7 +24,7 @@
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/main_tabs"
+            android:id="@+id/main_TabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
@@ -34,13 +34,13 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/main_vp"
+        android:id="@+id/main_ViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/main_fab_add"
+        android:id="@+id/main_FloatingActionButton_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
